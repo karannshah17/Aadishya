@@ -11,17 +11,16 @@ const Header = () => {
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
-    { name: "Timeline", href: "#timeline" },
     { name: "Clients", href: "#clients" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-card">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border shadow-card">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 bg-background px-2 py-1 rounded-md">
             <img 
               src={logo} 
               alt="Aadishya - A Unit of RJ Enterprise" 

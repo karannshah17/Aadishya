@@ -7,10 +7,10 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
-import Timeline from "./components/Timeline";
 import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsappButton from "./components/WhatsappButton";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,11 +29,11 @@ const App = () => (
                 <Hero />
                 <About />
                 <Services />
-                <Timeline />
                 <Clients />
                 <Contact />
               </main>
               <Footer />
+              <WhatsappButton />
             </div>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
