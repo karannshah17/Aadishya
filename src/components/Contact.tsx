@@ -51,7 +51,7 @@ ${formData.message}
     `;
     
     // Create mailto link
-    const mailtoLink = `mailto:aadishya@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:thebondkaran@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -85,7 +85,7 @@ ${formData.message}
     {
       icon: Mail,
       title: "Email",
-      content: "info@aadishya.com",
+      content: "jainesh@gmail.com",
       description: "We'll respond within 24 hours"
     },
     {

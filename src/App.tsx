@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
 import Clients from "./components/Clients";
+import Company from "./components/Company";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
@@ -22,21 +23,41 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={
-            <div className="min-h-screen">
-              <Header />
-              <main>
-                <Hero />
-                <About />
-                <Services />
-                <Clients />
-                <Contact />
-              </main>
-              <Footer />
-              <WhatsappButton />
-            </div>
-          } />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Homepage */}
+          <Route
+            path="/"
+            element={
+              <div className="min-h-screen">
+                <Header />
+                <main>
+                  <Hero />
+                  <About />
+                  <Services />
+                  <Clients />
+                  <Contact />
+                </main>
+                <Footer />
+                <WhatsappButton />
+              </div>
+            }
+          />
+
+          {/* Company Page */}
+          <Route
+            path="/company"
+            element={
+              <div className="min-h-screen">
+                <Header />
+                <main>
+                  <Company />
+                </main>
+                <Footer />
+                <WhatsappButton />
+              </div>
+            }
+          />
+
+          {/* 404 Page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

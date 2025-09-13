@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Clients", href: "#clients" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Clients", href: "/#clients" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -31,13 +32,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <HashLink
+                smooth
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {item.name}
-              </a>
+              </HashLink>
             ))}
           </nav>
 
@@ -68,14 +70,15 @@ const Header = () => {
         <div className="lg:hidden bg-background border-t border-border shadow-elegant">
           <nav className="container mx-auto px-4 py-4 space-y-3">
             {navItems.map((item) => (
-              <a
+              <HashLink
+                smooth
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-2 text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {item.name}
-              </a>
+              </HashLink>
             ))}
             <Button variant="outline" size="sm" className="w-full mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Phone className="w-4 h-4 mr-2" />

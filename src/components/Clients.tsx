@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
 const Clients = () => {
-  // Mock client logos - in a real implementation, these would be actual client logos
   const clients = [
     { name: "Zydus Hospital", industry: "Healthcare" },
     { name: "Super City", industry: "Real Estate" },
@@ -61,9 +60,8 @@ const Clients = () => {
               className="group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <Card className="hover:shadow-elegant transition-all duration-300 border-0 bg-card h-full">
+              <Card className="hover:shadow-elegant transition-all duration-300 border border-primary/30 bg-card h-full">
                 <CardContent className="p-6 text-center h-full flex flex-col justify-center">
-                  {/* Mock Logo - using first letter as placeholder */}
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-glow transition-all duration-300">
                     <span className="text-2xl font-bold text-primary-foreground">
                       {client.name.charAt(0)}
@@ -91,28 +89,24 @@ const Clients = () => {
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index}
-                className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card animate-fade-in"
+                className="group hover:shadow-elegant transition-all duration-300 border border-primary/30 bg-card animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardContent className="p-8 text-center">
-                  {/* Quote Icon */}
                   <div className="mb-6">
                     <Quote className="w-8 h-8 text-secondary mx-auto" />
                   </div>
                   
-                  {/* Rating */}
                   <div className="flex justify-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-secondary fill-current" />
                     ))}
                   </div>
 
-                  {/* Testimonial Text */}
                   <p className="text-muted-foreground mb-6 leading-relaxed italic">
                     "{testimonial.text}"
                   </p>
 
-                  {/* Client Info */}
                   <div>
                     <h4 className="font-bold text-foreground">{testimonial.name}</h4>
                     <p className="text-sm text-muted-foreground">{testimonial.company}</p>

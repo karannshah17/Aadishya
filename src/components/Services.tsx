@@ -69,7 +69,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card animate-fade-in h-full"
+              className="group border border-primary/30 bg-card rounded-xl hover:shadow-xl hover:scale-105 transform transition-all duration-500 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 h-full flex flex-col">
@@ -90,7 +90,7 @@ const Services = () => {
                   </p>
 
                   {/* Features List */}
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-secondary rounded-full mr-3"></div>
@@ -99,15 +99,6 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-
-                {/* CTA */}
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group-hover:shadow-glow transition-all duration-300"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -121,7 +112,7 @@ const Services = () => {
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Our expert team is ready to discuss your specific requirements and deliver innovative solutions.
           </p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+          <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300"  onClick={() => window.open("https://wa.me/91XXXXXXXXXX?text=Hi, I want a free consultation", "_blank")}>
             Get Free Consultation
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
