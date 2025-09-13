@@ -96,25 +96,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter & Social */}
+          {/* Social Links */}
           <div>
-            <h3 className="text-lg font-bold text-accent-foreground mb-6">Stay Connected</h3>
-            <p className="text-accent-foreground/80 mb-4 text-sm">
-              Subscribe to our newsletter for updates on latest projects and engineering insights.
-            </p>
-            
-            <div className="flex space-x-2 mb-6">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-3 py-2 text-sm bg-background/10 border border-accent-foreground/20 rounded-md text-accent-foreground placeholder-accent-foreground/60 focus:border-secondary focus:outline-none"
-              />
-              <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Subscribe
-              </Button>
-            </div>
-
-            {/* Social Links */}
+            <h3 className="text-lg font-bold text-accent-foreground mb-6">Follow Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a

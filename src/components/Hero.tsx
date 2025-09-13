@@ -42,7 +42,8 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-accent px-8 py-3"
+              className="border-primary-foreground/80 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground hover:text-accent px-8 py-3"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get Consultation
             </Button>

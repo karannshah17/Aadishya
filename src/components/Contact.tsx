@@ -33,26 +33,46 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Create email content
+    const emailSubject = `New Inquiry from ${formData.name} - ${formData.service}`;
+    const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Company: ${formData.company}
+Service: ${formData.service}
+
+Message:
+${formData.message}
+    `;
+    
+    // Create mailto link
+    const mailtoLink = `mailto:aadishya@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     setTimeout(() => {
-      setIsSubmitting(false);
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        title: "Email client opened!",
+        description: "Your message is ready to send.",
       });
+      setIsSubmitting(false);
+      
+      // Reset form
       setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: ""
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
       });
-    }, 2000);
+    }, 1000);
   };
 
   const contactInfo = [
